@@ -84,6 +84,7 @@ const resetPassword = async(req,res)=>{
     if(!user) return res.status(200).json({success:false,msg:"invalid otp"})
     const hashedpassword =await bcrypt.hash(password,12)
     user.password = hashedpassword
+    user.otp = undefined
     await user.save()
     res.status(200).json({success:true,msg:"password reset successful"})
 
@@ -94,6 +95,8 @@ const resetPassword = async(req,res)=>{
 
 
 module.exports = {createParent,verifymail,loginParent,generateotp,resetPassword}
+
+
 
 
 

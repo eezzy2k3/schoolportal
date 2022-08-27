@@ -115,7 +115,7 @@ const verifymail = async(req,res)=>{
         const findstudent = await Student.findOne({confirmationCode})
         if(!findstudent) return res.status(400).json({success:false,msg:"Invalid confirmation code"})
         findstudent.status="Active"
-        findstudent.save()
+        await findstudent.save()
         res.status(200).json({success:true,msg:"email was successfully confirmed"})
     }catch(error){
         res.status(404).json({success:false,msg:error.message})
