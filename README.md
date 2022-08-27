@@ -2,7 +2,7 @@
 
 
 
-> Project Brief:An API for a school management system. This API allows lecturers to enter student records/examination scores make full crud functionality on the records,students get to check their records/scores and sponsor/parents can also check result of their wards
+> Project Brief: An API for a school management system. This API allows lecturers to enter student records/examination scores, make full crud functionality on the records,students get to check their records/scores and sponsor/parents can also check result of their wards
 
 
 
